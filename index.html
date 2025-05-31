@@ -3,12 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Arnoldservice - Professional Maintenance</title>
+    <title>Arnoldservice - Professional Maintenance Solutions</title>
     <link rel="stylesheet" href="styles.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/img/fav/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/img/fav/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/img/fav/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/img/fav/site.webmanifest" />
   </head>
   <body>
     <!-- Top Bar -->
@@ -33,8 +51,11 @@
       <div class="container">
         <div class="header-content">
           <div class="logo">
-            <i class="fas fa-tools fa-3x"></i>
-            <h1>ARNOLD<span>SERVICE</span></h1>
+            <img
+              src="/img/logo2use_0.png"
+              alt="Arnoldservice Logo"
+              class="logo-img"
+            />
           </div>
           <div class="search-cart">
             <div class="search-box">
@@ -50,7 +71,7 @@
       </div>
     </header>
 
-    <!-- Navigation -->
+    <!-- Navigation with SRS-Style Mega Menu -->
     <nav class="main-nav">
       <div class="container nav-container">
         <ul class="nav-menu">
@@ -70,8 +91,18 @@
               <a href="#">Preventive Maintenance</a>
             </div>
           </li>
-          <li>
-            <a href="#"><i class="fas fa-box"></i> Products</a>
+          <li class="dropdown">
+            <a href="#"
+              ><i class="fas fa-box"></i> Products
+              <i class="fas fa-chevron-down dropdown-icon"></i
+            ></a>
+            <div class="dropdown-content">
+              <a href="#">Maintenance Tools</a>
+              <a href="#">Electrical Components</a>
+              <a href="#">HVAC Equipment</a>
+              <a href="#">Safety Gear</a>
+              <a href="#">Consumables</a>
+            </div>
           </li>
           <li class="dropdown">
             <a href="#"
@@ -86,8 +117,66 @@
               <a href="#">Healthcare</a>
             </div>
           </li>
+          <li class="mega-dropdown">
+            <a href="#" class="active"
+              ><i class="fas fa-info-circle"></i> About
+              <i class="fas fa-chevron-down dropdown-icon"></i
+            ></a>
+            <div class="mega-menu">
+              <div class="mega-column">
+                <h3>ABOUT</h3>
+                <ul class="mega-links">
+                  <li><a href="#">Raise the Roof Foundation</a></li>
+                  <li><a href="#">Arnoldservice Delivers</a></li>
+                  <li><a href="#">Community Sponsorship</a></li>
+                </ul>
+
+                <h3>TO SERVING</h3>
+                <ul class="mega-links">
+                  <li><a href="#">Your Business</a></li>
+                </ul>
+              </div>
+
+              <div class="mega-column">
+                <h3>COMPANY</h3>
+                <ul class="mega-links">
+                  <li><a href="#">HISTORY</a></li>
+                  <li><a href="#">LEADERSHIP</a></li>
+                  <li><a href="#">ACQUISITIONS</a></li>
+                </ul>
+
+                <h3>ARNOLDSERVICE PARA LATINOS</h3>
+                <ul class="mega-links">
+                  <li><a href="#">Español Resources</a></li>
+                  <li><a href="#">Latin Markets</a></li>
+                </ul>
+
+                <h3>CAREERS</h3>
+                <ul class="mega-links">
+                  <li><a href="#">Job Openings</a></li>
+                  <li><a href="#">Company Culture</a></li>
+                </ul>
+              </div>
+
+              <div class="featured-section">
+                <h3>COMMITTED TO SERVING YOUR BUSINESS</h3>
+                <p>
+                  Arnoldlservice has grown through strategic partnerships and
+                  organic growth to become one of the leading maintenance
+                  providers in Scandinavia with over 150 certified technicians
+                  serving clients nationwide.
+                </p>
+
+                <div class="featured-links">
+                  <a href="#" class="featured-link">CAREERS</a>
+                  <a href="#" class="featured-link">CONTACT US</a>
+                  <a href="#" class="featured-link">OUR STORY</a>
+                </div>
+              </div>
+            </div>
+          </li>
           <li>
-            <a href="#"><i class="fas fa-info-circle"></i> About Us</a>
+            <a href="#"><i class="fas fa-newspaper"></i> Resources</a>
           </li>
           <li>
             <a href="#"><i class="fas fa-envelope"></i> Contact</a>
@@ -102,7 +191,7 @@
     <!-- Hero Section -->
     <section class="hero">
       <div class="hero-content">
-        <h2>Professional Maintenance Solutions</h2>
+        <h1>Professional Maintenance Solutions</h1>
         <p>
           Delivering high-quality industrial maintenance services with over 20
           years of experience. Trusted by leading companies across Sweden.
@@ -111,11 +200,12 @@
       </div>
     </section>
 
-    <!-- Main Content -->
-    <main class="content">
-      <div class="section">
+    <!-- Services Section -->
+    <section class="services">
+      <div class="container">
         <div class="section-title">
           <h2>Our Services</h2>
+          <p>Comprehensive solutions for all your maintenance needs</p>
         </div>
         <div class="services-grid">
           <div class="service-card">
@@ -165,136 +255,215 @@
           </div>
         </div>
       </div>
+    </section>
 
-      <div class="section">
-        <div class="section-title">
-          <h2>About Arnoldservice</h2>
-        </div>
-        <div class="about-content">
-          <p>
-            Founded in 2003, Arnoldservice has grown to become one of Sweden's
-            leading providers of industrial maintenance solutions. With a team
-            of over 150 certified technicians, we serve clients across multiple
-            industries including manufacturing, energy, and logistics.
-          </p>
-          <p>
-            Our commitment to quality, safety, and customer satisfaction has
-            earned us numerous industry awards and a reputation for excellence.
-            We continuously invest in training and technology to deliver the
-            most advanced maintenance solutions available.
-          </p>
-          <div class="awards">
-            <div class="award-circle">
-              <i class="fas fa-award"></i>
+    <!-- Why Choose Us Section -->
+    <section class="why-choose">
+      <div class="container">
+        <div class="why-container">
+          <div class="why-content">
+            <div class="section-title left-align">
+              <h2>Why Choose Arnoldservice?</h2>
+              <p>Excellence in every service we provide</p>
             </div>
-            <div class="award-circle">
-              <i class="fas fa-medal"></i>
+            <p>
+              With decades of experience in the industry, we pride ourselves on
+              delivering exceptional service quality and reliability to all our
+              clients. Our team of certified technicians undergoes continuous
+              training to stay updated with the latest technologies and industry
+              standards.
+            </p>
+
+            <div class="features">
+              <div class="feature">
+                <i class="fas fa-check-circle"></i>
+                <div>
+                  <h4>24/7 Emergency Service</h4>
+                  <p>
+                    We're always ready to assist with urgent maintenance needs.
+                  </p>
+                </div>
+              </div>
+              <div class="feature">
+                <i class="fas fa-check-circle"></i>
+                <div>
+                  <h4>Certified Technicians</h4>
+                  <p>
+                    All our technicians are certified and highly experienced.
+                  </p>
+                </div>
+              </div>
+              <div class="feature">
+                <i class="fas fa-check-circle"></i>
+                <div>
+                  <h4>Competitive Pricing</h4>
+                  <p>Quality service at fair and transparent pricing.</p>
+                </div>
+              </div>
+              <div class="feature">
+                <i class="fas fa-check-circle"></i>
+                <div>
+                  <h4>Guaranteed Satisfaction</h4>
+                  <p>We stand behind our work with comprehensive guarantees.</p>
+                </div>
+              </div>
             </div>
-            <div class="award-circle">
-              <i class="fas fa-star"></i>
+          </div>
+          <div class="why-image">
+            <div class="image-placeholder">
+              <img
+                src="/img/hedge-cutting.jpg"
+                alt="Arnoldservice Logo"
+                class="logo-img"
+              />
             </div>
           </div>
         </div>
       </div>
+    </section>
 
-      <div class="section">
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+      <div class="container">
         <div class="section-title">
-          <h2>Our Clients</h2>
+          <h2>What Our Clients Say</h2>
+          <p>Hear from our satisfied customers</p>
         </div>
-        <div class="clients-grid">
-          <div class="client-card">
-            <div class="client-icon">
-              <i class="fas fa-industry"></i>
+        <div class="testimonial-grid">
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              <p>
+                Arnoldservice has been our maintenance partner for over 5 years.
+                Their team is professional, responsive, and always delivers
+                high-quality work. Highly recommended!
+              </p>
             </div>
-            <h3>Manufacturing</h3>
+            <div class="testimonial-author">
+              <div class="author-avatar">AE</div>
+              <div class="author-info">
+                <h4>Anders Eriksson</h4>
+                <p>Operations Manager, Manufacturing Co.</p>
+              </div>
+            </div>
           </div>
-          <div class="client-card">
-            <div class="client-icon">
-              <i class="fas fa-plug"></i>
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              <p>
+                When we had an emergency shutdown, Arnoldservice responded
+                within hours and had us back up and running in record time.
+                Their expertise saved us thousands in lost production.
+              </p>
             </div>
-            <h3>Energy</h3>
+            <div class="testimonial-author">
+              <div class="author-avatar">MJ</div>
+              <div class="author-info">
+                <h4>Maria Johansson</h4>
+                <p>Plant Director, Tech Solutions AB</p>
+              </div>
+            </div>
           </div>
-          <div class="client-card">
-            <div class="client-icon">
-              <i class="fas fa-truck"></i>
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              <p>
+                The preventive maintenance program implemented by Arnoldservice
+                has significantly reduced our equipment downtime and maintenance
+                costs. A true partner in our success.
+              </p>
             </div>
-            <h3>Logistics</h3>
-          </div>
-          <div class="client-card">
-            <div class="client-icon">
-              <i class="fas fa-school"></i>
+            <div class="testimonial-author">
+              <div class="author-avatar">TL</div>
+              <div class="author-info">
+                <h4>Tomas Larsson</h4>
+                <p>Facilities Manager, Logistics Group</p>
+              </div>
             </div>
-            <h3>Education</h3>
           </div>
         </div>
       </div>
-    </main>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="container">
+        <h2>Ready to Enhance Your Operations?</h2>
+        <p>
+          Contact us today to discuss how our maintenance solutions can improve
+          your facility's efficiency and reliability.
+        </p>
+        <div class="cta-buttons">
+          <a href="#" class="cta-button">Request a Quote</a>
+          <a href="#" class="cta-button secondary">Contact Us</a>
+        </div>
+      </div>
+    </section>
 
     <!-- Footer -->
     <footer class="footer">
-      <div class="footer-grid">
-        <div class="footer-column">
-          <h3>About Arnoldservice</h3>
-          <p>
-            Providing professional industrial maintenance services since 2003.
-            We pride ourselves on quality workmanship and exceptional customer
-            service.
-          </p>
-          <div class="social-links">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-column">
+            <h3>About Arnoldservice</h3>
+            <p>
+              Providing professional industrial maintenance services since 2003.
+              We pride ourselves on quality workmanship and exceptional customer
+              service.
+            </p>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+          <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul class="footer-links">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Products</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Careers</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Our Services</h3>
+            <ul class="footer-links">
+              <li><a href="#">Industrial Maintenance</a></li>
+              <li><a href="#">Electrical Systems</a></li>
+              <li><a href="#">HVAC Services</a></li>
+              <li><a href="#">Plumbing Services</a></li>
+              <li><a href="#">Preventive Maintenance</a></li>
+              <li><a href="#">Emergency Repairs</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Contact Us</h3>
+            <ul class="contact-info-footer">
+              <li>
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Industrivägen 12, 123 45 Stockholm, Sweden</span>
+              </li>
+              <li>
+                <i class="fas fa-phone"></i>
+                <span>+46 123 456 789</span>
+              </li>
+              <li>
+                <i class="fas fa-envelope"></i>
+                <span>info@Arnoldservice.se</span>
+              </li>
+              <li>
+                <i class="fas fa-clock"></i>
+                <span
+                  >Mon-Fri: 8:00 AM - 5:00 PM<br />24/7 Emergency Service</span
+                >
+              </li>
+            </ul>
           </div>
         </div>
-        <div class="footer-column">
-          <h3>Quick Links</h3>
-          <ul class="footer-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Products</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Careers</a></li>
-          </ul>
+        <div class="copyright">
+          <p>&copy; 2025 Arnoldservice AB. All Rights Reserved.</p>
         </div>
-        <div class="footer-column">
-          <h3>Our Services</h3>
-          <ul class="footer-links">
-            <li><a href="#">Industrial Maintenance</a></li>
-            <li><a href="#">Electrical Systems</a></li>
-            <li><a href="#">HVAC Services</a></li>
-            <li><a href="#">Plumbing Services</a></li>
-            <li><a href="#">Preventive Maintenance</a></li>
-            <li><a href="#">Emergency Repairs</a></li>
-          </ul>
-        </div>
-        <div class="footer-column">
-          <h3>Contact Us</h3>
-          <ul class="contact-info-footer">
-            <li>
-              <i class="fas fa-map-marker-alt"></i>
-              <span>Industrivägen 12, 123 45 Stockholm, Sweden</span>
-            </li>
-            <li>
-              <i class="fas fa-phone"></i>
-              <span>+46 123 456 789</span>
-            </li>
-            <li>
-              <i class="fas fa-envelope"></i>
-              <span>info@Arnoldservice.se</span>
-            </li>
-            <li>
-              <i class="fas fa-clock"></i>
-              <span
-                >Mon-Fri: 8:00 AM - 5:00 PM<br />24/7 Emergency Service</span
-              >
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="copyright">
-        <p>&copy; 2025 Arnoldservice AB. All Rights Reserved</p>
       </div>
     </footer>
 

@@ -15,7 +15,7 @@ hamburger.addEventListener("click", () => {
 });
 
 // Mobile Dropdown Toggle
-document.querySelectorAll(".dropdown").forEach((dropdown) => {
+document.querySelectorAll(".dropdown, .mega-dropdown").forEach((dropdown) => {
   const dropdownToggle = dropdown.querySelector("a");
 
   dropdownToggle.addEventListener("click", function (e) {
@@ -42,11 +42,13 @@ document.addEventListener("click", (e) => {
     icon.classList.add("fa-bars");
 
     // Close all dropdowns
-    document.querySelectorAll(".dropdown").forEach((dropdown) => {
-      dropdown.classList.remove("active");
-      const dropdownIcon = dropdown.querySelector(".dropdown-icon");
-      dropdownIcon.style.transform = "rotate(0)";
-    });
+    document
+      .querySelectorAll(".dropdown, .mega-dropdown")
+      .forEach((dropdown) => {
+        dropdown.classList.remove("active");
+        const dropdownIcon = dropdown.querySelector(".dropdown-icon");
+        dropdownIcon.style.transform = "rotate(0)";
+      });
   }
 });
 
@@ -122,3 +124,22 @@ document.querySelectorAll(".nav-menu > li > a").forEach((link) => {
 document
   .querySelector(".nav-menu > li:first-child > a")
   .classList.add("active");
+
+// Close mega menu when clicking outside
+document.addEventListener("click", (e) => {
+  if (!e.target.closest(".mega-dropdown")) {
+    document.querySelectorAll(".mega-menu").forEach((menu) => {
+      menu.style.opacity = "0";
+      menu.style.visibility = "hidden";
+      menu.style.transform = "translateY(10px)";
+    });
+  }
+});
+
+// Add to cart animation
+document.querySelectorAll(".cta-button").forEach((button) => {
+  button.addEventListener("click", function (e) {
+    e.preventDefault();
+    showNotification("Request received! We will contact you shortly.");
+  });
+});
