@@ -143,3 +143,63 @@ document.querySelectorAll(".cta-button").forEach((button) => {
     showNotification("Request received! We will contact you shortly.");
   });
 });
+// this is the code for the search bar
+document.addEventListener("DOMContentLoaded", function () {
+  const input = document.querySelector(".search-box input");
+  const button = document.querySelector(".search-box button");
+
+  button.addEventListener("click", function () {
+    const keyword = input.value.trim().toLowerCase();
+    if (!keyword) return;
+
+    // Remove previous highlights
+    document.querySelectorAll(".highlight").forEach((el) => {
+      el.outerHTML = el.innerText;
+    });
+
+    let found = false;
+
+    // Recursively search and highlight text nodes
+    function searchAndHighlight(node) {
+      if (node.nodeType === 3) {
+        const text = node.textContent;
+        const index = text.toLowerCase().indexOf(keyword);
+        if (index > -1) {
+          const span = document.createElement("span");
+          span.className = "highlight";
+          span.textContent = text.substr(index, keyword.length);
+
+          const after = document.createTextNode(
+            text.substr(index + keyword.length)
+          );
+          const before = document.createTextNode(text.substr(0, index));
+
+          const parent = node.parentNode;
+          parent.replaceChild(after, node);
+          parent.insertBefore(span, after);
+          parent.insertBefore(before, span);
+
+          if (!found) {
+            span.scrollIntoView({ behavior: "smooth", block: "center" });
+            found = true;
+          }
+        }
+      } else if (
+        node.nodeType === 1 &&
+        node.childNodes &&
+        !["SCRIPT", "STYLE", "NOSCRIPT"].includes(node.tagName)
+      ) {
+        node.childNodes.forEach(searchAndHighlight);
+      }
+    }
+
+    searchAndHighlight(document.body);
+  });
+
+  // Also trigger search on Enter key
+  input.addEventListener("keypress", function (e) {
+    if (e.key === "Enter") {
+      button.click();
+    }
+  });
+});

@@ -108,6 +108,10 @@ body {
   align-items: center;
   gap: 20px;
 }
+.highlight {
+  background-color: yellow;
+  font-weight: bold;
+}
 
 .search-box {
   position: relative;
@@ -228,7 +232,8 @@ body {
 
 .nav-menu a i {
   margin-right: 8px;
-  font-size: 16px;
+  font-size: 14px;
+  color: var(--secondary);
 }
 
 .dropdown-icon {
@@ -239,9 +244,10 @@ body {
 .book-btn a {
   color: var(--secondary-hover) !important;
   background-color: white;
-  padding: 8px 16px;
-  border-radius: 20px;
+  padding: 10px 15px;
+  border-radius: 10px;
   transition: background 0.3s ease;
+  padding: 5px;
 }
 
 .book-btn a:hover {
@@ -569,15 +575,20 @@ body {
 
 /* Card Styles */
 .service-card {
+  position: relative;
   background-color: #f3f8fc;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 0.6s ease forwards;
-  animation-delay: 0.2s;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transform: translateY(0);
+  will-change: transform;
+}
+
+.service-card:hover {
+  transform: scale(1.5);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  z-index: 2;
 }
 
 /* Fade In Animation */
@@ -590,19 +601,18 @@ body {
 
 /* Icon/Thumbnail Style */
 .service-img {
-  height: 180px;
-  background: linear-gradient(135deg, #01f080, #0eb34d);
+  height: 250px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
-  font-size: 3rem;
 }
 
-.service-img i {
-  font-size: 2.5rem;
+.service-img img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
 }
-
 /* Content Styling */
 .service-content {
   padding: 25px 20px;
