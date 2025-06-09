@@ -236,6 +236,17 @@ body {
   font-size: 12px;
   transition: transform 0.3s;
 }
+.book-btn a {
+  color: var(--secondary-hover) !important;
+  background-color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  transition: background 0.3s ease;
+}
+
+.book-btn a:hover {
+  background-color: var(--secondary-hover);
+}
 
 /* Dropdown Menu */
 .dropdown {
@@ -432,7 +443,7 @@ body {
 /* Hero Section */
 .hero {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("/img/villan-stensattning.jpg");
+    url("/img/hedge-cutting.jpg");
   background-size: cover;
   background-position: center;
   color: white;
@@ -805,7 +816,7 @@ body {
 
 /* CTA Section */
 .cta-section {
-  background: linear-gradient(to right, var(--primary), #2dfa2d);
+  background: var(--primary);
   color: white;
   text-align: center;
   padding: 80px 0;
@@ -879,7 +890,7 @@ body {
 }
 
 .footer-links a {
-  color: #aaa;
+  color: white;
   text-decoration: none;
   transition: color 0.3s;
 }
@@ -983,7 +994,8 @@ body {
   }
 
   .main-nav {
-    top: 200px; /* Adjusted for mobile header height */
+    top: 0;
+    position: fixed;
   }
 
   .nav-menu {
@@ -1045,7 +1057,11 @@ body {
   }
 
   .hero h1 {
-    font-size: 2.2rem;
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1.2;
   }
 
   .why-container {
@@ -1084,4 +1100,66 @@ body {
   .featured-section {
     grid-column: 1;
   }
+}
+/* ------------this is the booking page-------------- */
+.booking-section {
+  padding: 60px 20px;
+  text-align: center;
+  background: linear-gradient(
+      rgba(216, 237, 180, 0.5),
+      rgba(216, 237, 180, 0.5)
+    ),
+    url("/img/painting-2.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.booking-section h2 {
+  font-size: 2rem;
+  margin: 30px;
+  color: var(--top-bar);
+}
+
+.booking-form {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #000;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  outline: none;
+  background-color: #fff;
+}
+
+.submit-btn {
+  background-color: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #0f7130; /* slightly darker than primary */
 }
