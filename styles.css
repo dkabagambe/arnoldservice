@@ -720,7 +720,7 @@ body {
 }
 #works {
   padding: 4rem 2rem;
-
+  background-color: var(--light);
   text-align: center;
 }
 
@@ -1071,7 +1071,7 @@ body {
   }
 
   .main-nav {
-    top: 0;
+    top: 10;
     position: fixed;
   }
 
