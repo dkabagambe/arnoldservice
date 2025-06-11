@@ -1244,7 +1244,6 @@ body {
 /*whatsapp styles*/
 .qlwapp-whatsapp-icon {
   font-family: "qlwapp-whatsapp" !important;
-  speak: none;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -1886,7 +1885,7 @@ body {
 #qlwapp .qlwapp-box .qlwapp-header,
 #qlwapp .qlwapp-box .qlwapp-user,
 #qlwapp .qlwapp-box .qlwapp-user:before {
-  background-color: var(--primary);
+  background-color: var(--secondary);
 }
 #qlwapp {
   display: none;
