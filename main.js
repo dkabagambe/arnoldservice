@@ -203,3 +203,29 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+// Load Google Translate script dynamically
+function loadGoogleTranslate() {
+  const script = document.createElement("script");
+  script.src =
+    "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+  script.type = "text/javascript";
+  document.body.appendChild(script);
+}
+
+// Initialize Google Translate
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement(
+    {
+      pageLanguage: "sv", // Swedish is default
+      includedLanguages: "sv,en", // Add more if needed: 'sv,en,fr,de'
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+      autoDisplay: false,
+    },
+    "google_translate_element"
+  );
+}
+
+// Load the script after DOM is ready
+document.addEventListener("DOMContentLoaded", function () {
+  loadGoogleTranslate();
+});
